@@ -30,5 +30,20 @@ namespace PlotRandom2
                 Sample = new ClassSample();
             }
         }
+
+        private void userControl11_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            userControl11.Sample.PlotData(this.cartesianChart1);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            userControl11.Sample.PlotHist(this.cartesianChart2);
+        }
     }
 }

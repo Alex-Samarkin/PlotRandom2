@@ -29,12 +29,14 @@ namespace PlotRandom2
         /// </summary>
         private void InitializeComponent()
         {
-            PlotRandom2.ClassSample classSample2 = new PlotRandom2.ClassSample();
+            PlotRandom2.ClassSample classSample1 = new PlotRandom2.ClassSample();
             this.button1 = new System.Windows.Forms.Button();
-            this.userControl11 = new PlotRandom2.UserControl1();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.cartesianChart1 = new LiveCharts.WinForms.CartesianChart();
             this.cartesianChart2 = new LiveCharts.WinForms.CartesianChart();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.userControl11 = new PlotRandom2.UserControl1();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -52,20 +54,6 @@ namespace PlotRandom2
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // userControl11
-            // 
-            this.userControl11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.userControl11.Dock = System.Windows.Forms.DockStyle.Left;
-            this.userControl11.Location = new System.Drawing.Point(0, 23);
-            this.userControl11.Margin = new System.Windows.Forms.Padding(5);
-            this.userControl11.Name = "userControl11";
-            this.userControl11.Padding = new System.Windows.Forms.Padding(5);
-            classSample2.X = null;
-            classSample2.Y = null;
-            this.userControl11.Sample = classSample2;
-            this.userControl11.Size = new System.Drawing.Size(311, 487);
-            this.userControl11.TabIndex = 1;
-            // 
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -75,10 +63,12 @@ namespace PlotRandom2
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.button2);
             this.splitContainer1.Panel1.Controls.Add(this.cartesianChart1);
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.button3);
             this.splitContainer1.Panel2.Controls.Add(this.cartesianChart2);
             this.splitContainer1.Size = new System.Drawing.Size(489, 487);
             this.splitContainer1.SplitterDistance = 237;
@@ -101,6 +91,43 @@ namespace PlotRandom2
             this.cartesianChart2.Size = new System.Drawing.Size(489, 246);
             this.cartesianChart2.TabIndex = 0;
             this.cartesianChart2.Text = "cartesianChart2";
+            // 
+            // button2
+            // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.Location = new System.Drawing.Point(384, 211);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(102, 23);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "точки";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button3.Location = new System.Drawing.Point(384, 220);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(102, 23);
+            this.button3.TabIndex = 1;
+            this.button3.Text = "гистограмма";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // userControl11
+            // 
+            this.userControl11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.userControl11.Dock = System.Windows.Forms.DockStyle.Left;
+            this.userControl11.Location = new System.Drawing.Point(0, 23);
+            this.userControl11.Margin = new System.Windows.Forms.Padding(5);
+            this.userControl11.Name = "userControl11";
+            this.userControl11.Padding = new System.Windows.Forms.Padding(5);
+            classSample1.X = null;
+            classSample1.Y = null;
+            this.userControl11.Sample = classSample1;
+            this.userControl11.Size = new System.Drawing.Size(311, 487);
+            this.userControl11.TabIndex = 1;
+            this.userControl11.Load += new System.EventHandler(this.userControl11_Load);
             // 
             // Form1
             // 
@@ -127,6 +154,8 @@ namespace PlotRandom2
         private System.Windows.Forms.SplitContainer splitContainer1;
         private LiveCharts.WinForms.CartesianChart cartesianChart1;
         private LiveCharts.WinForms.CartesianChart cartesianChart2;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }
 
